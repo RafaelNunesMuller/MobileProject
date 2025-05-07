@@ -1,4 +1,4 @@
 						Descrição do projeto
 
 
-O projeto consiste em um app de concessionaria de carros com 5 telas de acesso Home, Login, Cadastro de Produtos, Cadastro e Carrinho. Além disso, o app terá um sistema de filtro de categorias e tipos de carros. 
+O projeto consiste em um app de concessionaria de carros com 6 telas de acesso Home, Login, Login de ADM, Cadastro de Produtos, Cadastro e Carrinho. Além disso, o app terá um sistema de filtro de categorias e tipos de carros. 
