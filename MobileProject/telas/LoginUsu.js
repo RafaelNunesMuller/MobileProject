@@ -1,20 +1,27 @@
-import { View, Text, TextInput, StyleSheet, Button } from "react-native";
+import { View, Text, TextInput, StyleSheet, Button, TouchableOpacity } from "react-native";
+import { useState } from "react";
 
-export default function LoginUsu() {
+export default function LoginUsu({navigation}) {
+
+  const [usario, setUsuario] = useState("");
+  const [senha, setSenha] = useState("");
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login de Usuário</Text>
       <TextInput
         style={styles.input}
         placeholder="Nome"
+        value={usario}
+        onChangeText={setUsuario}
       />
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-      />
+
       <TextInput
         style={styles.input}
         placeholder="Senha"
+        value={senha}
+        onChangeText={setSenha}
+        secureTextEntry={true}
       />
       <Button
         style={styles.btn}
