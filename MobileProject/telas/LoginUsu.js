@@ -3,7 +3,7 @@ import { useState } from "react";
 
 export default function LoginUsu({navigation}) {
 
-  const [usario, setUsuario] = useState("");
+  const [usuario, setUsuario] = useState(""); 
   const [senha, setSenha] = useState("");
 
   return (
@@ -12,7 +12,7 @@ export default function LoginUsu({navigation}) {
       <TextInput
         style={styles.input}
         placeholder="Nome"
-        value={usario}
+        value={usuario} 
         onChangeText={setUsuario}
       />
 
@@ -25,7 +25,14 @@ export default function LoginUsu({navigation}) {
       />
       <Button
         style={styles.btn}
+        title="LOGIN"
+        onPress={() => navigation.navigate('Hometab')} 
+      />
+
+      <Button
+        style={styles.btn}
         title="Cadastrar"
+        onPress={() => alert('Funcionalidade de cadastro ainda não implementada')} 
       />
     </View>
         
@@ -33,20 +40,23 @@ export default function LoginUsu({navigation}) {
 
 }
 const styles = StyleSheet.create({
+
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    
     title: {
         fontSize: 24,
         fontWeight: "bold",
         marginBottom: 20,
     },
     input: {
-        width: "100%",
-        padding: 10,
-        marginVertical: 10,
-
-        width: "80%",
+        width: "50%",
         padding: 10,
         margin: 10,
-
         borderWidth: 1,
         borderColor: "#000",
         borderRadius: 5,
@@ -60,4 +70,4 @@ const styles = StyleSheet.create({
       borderRadius: 5,
     },
 
-    });
+});
