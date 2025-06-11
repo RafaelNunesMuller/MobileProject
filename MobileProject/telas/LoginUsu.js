@@ -3,7 +3,8 @@ import { useState } from "react";
 
 export default function LoginUsu({navigation}) {
 
-  const [usuario, setUsuario] = useState(""); 
+  const [usuario, setUsuario] = useState("");
+
   const [senha, setSenha] = useState("");
 
   return (
@@ -12,7 +13,8 @@ export default function LoginUsu({navigation}) {
       <TextInput
         style={styles.input}
         placeholder="Nome"
-        value={usuario} 
+        value={usuario}
+
         onChangeText={setUsuario}
       />
 
@@ -25,7 +27,8 @@ export default function LoginUsu({navigation}) {
       />
       <Button
         style={styles.btn}
-        title="LOGIN"
+        title="Login"
+
         onPress={() => navigation.navigate('Hometab')} 
       />
 
@@ -41,6 +44,7 @@ export default function LoginUsu({navigation}) {
 }
 const styles = StyleSheet.create({
 
+
     container: {
       flex: 1,
       backgroundColor: '#fff',
@@ -54,6 +58,15 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     input: {
+        width: "100%",
+        padding: 10,
+        marginVertical: 10,
+
+        width: "80%",
+        padding: 10,
+        margin: 10,
+
+
         width: "50%",
         padding: 10,
         margin: 10,
@@ -61,6 +74,13 @@ const styles = StyleSheet.create({
         borderColor: "#000",
         borderRadius: 5,
     },
+    container: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+
 
     btn:{
       width: "100%",
@@ -70,4 +90,4 @@ const styles = StyleSheet.create({
       borderRadius: 5,
     },
 
-});
+    });
