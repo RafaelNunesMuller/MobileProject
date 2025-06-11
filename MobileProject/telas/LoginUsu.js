@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export default function LoginUsu({navigation}) {
 
-  const [usario, setUsuario] = useState("");
 
   const [usuario, setUsuario] = useState(""); 
   const [senha, setSenha] = useState("");
@@ -14,8 +13,6 @@ export default function LoginUsu({navigation}) {
       <TextInput
         style={styles.input}
         placeholder="Nome"
-        value={usario}
-
         value={usuario} 
         onChangeText={setUsuario}
       />
@@ -29,10 +26,8 @@ export default function LoginUsu({navigation}) {
       />
       <Button
         style={styles.btn}
-        title="Cadastrar"
-
         title="LOGIN"
-        onPress={() => navigation.navigate('Hometab')} 
+        onPress={() => navigation.navigate('Home')} 
       />
 
       <Button
@@ -92,7 +87,5 @@ const styles = StyleSheet.create({
       backgroundColor: "#000",
       borderRadius: 5,
     },
-
-    });
 
 });

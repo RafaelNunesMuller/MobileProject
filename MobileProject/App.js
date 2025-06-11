@@ -1,8 +1,4 @@
 import 'react-native-gesture-handler';
-import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationContainer } from '@react-navigation/native';
-
-import LoginUsu from './telas/LoginUsu';
 import CreateConsultationScreen from './telas/CriarConsultaTESTE';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'; 
 
@@ -13,44 +9,42 @@ import { createStackNavigator } from '@react-navigation/stack';
 import LoginUsu from './telas/LoginUsu';
 import Home from './telas/Home';
 
-function BottomTabBar(){
+function TabBar(){
   const Tab = createBottomTabNavigator(); 
   return(
-    <Tab.Navigator
-      screenOptions={{
-        tabBarActiveTintColor:'black',
-        tabBarActiveBackgroundColor:'red',
-        tabBarInactiveBackgroundColor:'blue',
-        headerStyle: {
-          backgroundColor: '#f4511e',
-        },
-        headerTintColor: '#fff',
-        headerTitleStyle: {
-          fontWeight: 'bold',
-        },
-      }}
-    >
-      <Tab.Screen name='Home' component={Home} options={{
-          tabBarIcon:() => (
-            <MaterialIcons name="home" size={40} color="white" />
-        )
-      }}/>
-    </Tab.Navigator>
-  )
-}
+    <Tab.Navigator screenOptions={({ route }) => ({
+      tabBarActiveTintColor: '#FFFFFF',
+      tabBarInactiveTintColor: '#000',
+      tabBarActiveBackgroundColor: 'red',
+      tabBarInactiveBackgroundColor: 'blue',
+      headerStyle:{backgroundColor:'#f4511e'},
+      headerTintColor:'#FFF',
+      headerTitleAlign:'center',
+      size: 40,
+      tabBarIcon: ({ focused, color, size }) => {
+        let iconName;
 
+        if (route.name === 'Home') {
+          iconName = focused ? 'home' : 'home-outline';
+          return <MaterialIcons name={'home'} size={size} color={color} />;
+        } 
+      },
+    })}>
+      <Tab.Screen name='Home' component={Home}></Tab.Screen>
+    </Tab.Navigator> 
+)}
 export default function App() {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
-        <Stack.Screen name='CriarConsulta' options={{headerShown:false}} component={CreateConsultationScreen}></Stack.Screen>
-        <Stack.Screen name='Login' options={{headerShown:false}} component={LoginUsu}></Stack.Screen>
-
       <Stack.Navigator initialRouteName="Login"> 
         <Stack.Screen name="Login" component={LoginUsu} options={{ headerShown: false }} />
-        <Stack.Screen name="Hometab" component={BottomTabBar} options={{ headerShown: false }} />
+        <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+        <Stack.Screen name='CriarConsulta' options={{headerShown:false}} component={CreateConsultationScreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
+
 }
+
 
