@@ -13,6 +13,7 @@ export default function LoginUsu({navigation}) {
         console.log('usuario logado', userCredential.user.email);
         navigation.navigate('Hometab');
       })
+      
       .catch(error => {
         console.error('Erro ao logar:', error);
       });

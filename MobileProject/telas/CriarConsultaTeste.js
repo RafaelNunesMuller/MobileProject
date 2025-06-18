@@ -1,7 +1,7 @@
 // screens/CreateConsultationScreen.js
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert, ScrollView, Platform } from 'react-native';
-import MyDatePicker from '../modules/MyDataPicker';
+import MyDatePicker from '../modules/MyDataPicker/remote';
 
 const CreateConsultationScreen = () => {
   const [patientName, setPatientName] = useState('');

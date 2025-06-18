@@ -6,6 +6,7 @@ import LoginUsu from './telas/LoginUsu';
 import CreateConsultationScreen from './telas/CriarConsultaTeste';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'; 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import Home from './telas/Home';
 
 function BottomTabBar() {
@@ -31,6 +32,15 @@ function BottomTabBar() {
         options={{
           tabBarIcon: () => (
             <MaterialIcons name="home" size={40} color="white" />
+          ),
+        }} 
+      />
+      <Tab.Screen 
+        name="Teste" 
+        component={CreateConsultationScreen} 
+        options={{
+          tabBarIcon: () => (
+            <MaterialIcons name="Teste" size={40} color="white" />
           ),
         }} 
       />

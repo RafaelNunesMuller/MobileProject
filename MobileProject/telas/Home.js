@@ -3,18 +3,24 @@ import { Text, View, StyleSheet, Image } from "react-native";
 export default function Home(){
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Texto.........................</Text>
+            <Text style={styles.title}>Bem Vindo a Recupperar</Text>
             <View style={styles.section}>
                 {<Image source={require("../assets/Medico1.jpg")} style={styles.image} />}
-                <Text style={styles.text}>Texto1</Text>
+                <Text style={styles.text}>Fundador de nossa clinica</Text>
             </View>
             <View style={styles.section}>
-                <Text style={styles.text}>Texto2</Text>
-                <Image source={require("../assets/Medico1.jpg")} style={styles.image} /> 
+                <Text style={styles.text}>Nossa clinica que fica localizado em Criciuma</Text>
+                <Image source={require("../assets/clinica.jpg")} style={styles.image} /> 
             </View>
             <View style={styles.section}>
-                <Text style={styles.bottom}>Texto3</Text>
-                <Text style={styles.bottom}>Texto4</Text>
+                <Text style={styles.bottom}>
+                    Você não está sozinho 
+                    {"\n\n\n"}
+                </Text>
+                
+                <Text style={styles.bottom2}>
+                    cuidar da mente também é um ato de coragem
+                Em alguns momentos da vida, nos sentimos sobrecarregados, sem energia, confusos ou presos em pensamentos que não conseguimos controlar. Ninguém escolhe passar por isso — mas todos merecem apoio.</Text>
             </View>
         </View>
     );
@@ -49,6 +55,13 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     bottom: {
+        fontWeight: 'bold',
+        fontSize: 16,
+        justifyContent:'center',
+        textAlign: 'center',
+        
+    },
+    bottom2: {
         fontSize: 16,
         justifyContent:'flex-end',
         textAlign: 'center',

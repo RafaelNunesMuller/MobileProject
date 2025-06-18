@@ -1,4 +1,9 @@
 // components/MyDatePicker/DatePicker.native.js
+
+//não sera ultilizado no momento, mas pode ser usado futuramente
+
+
+
 import React, { useState } from 'react';
 import { View, Button, Platform, Text, StyleSheet } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
