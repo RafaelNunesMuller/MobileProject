@@ -3,6 +3,7 @@
 import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+<<<<<<< Updated upstream
 
 import LoginUsu from './telas/LoginUsu';
 import CreateConsultationScreen from './telas/CriarConsultaTESTE';
@@ -11,6 +12,15 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+=======
+
+import LoginUsu from './telas/LoginUsu';
+import CreateConsultationScreen from './telas/CriarConsultaTESTE';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'; 
+
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+>>>>>>> Stashed changes
 import Home from './telas/Home';
 
 function BottomTabBar(){
@@ -56,4 +66,7 @@ export default function App() {
 <<<<<<< Updated upstream
 =======
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

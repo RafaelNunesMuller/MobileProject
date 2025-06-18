@@ -6,8 +6,12 @@ import { auth } from "../controller";
 export default function LoginUsu({navigation}) {
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   const [usuario, setUsuario] = useState("");
 
+=======
+  const [email, setEmail] = useState(""); 
+>>>>>>> Stashed changes
 =======
   const [email, setEmail] = useState(""); 
 >>>>>>> Stashed changes
@@ -22,6 +26,7 @@ export default function LoginUsu({navigation}) {
 }
 
   return (
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     <View style={styles.container}>
       <Text style={styles.title}>Login de Usuário</Text>
@@ -70,6 +75,30 @@ export default function LoginUsu({navigation}) {
         />
 >>>>>>> Stashed changes
 
+=======
+      <View style={styles.container}>
+        <Text style={styles.title}>Login de Usuário</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Nome"
+          value={email} 
+          onChangeText={setEmail}
+        />
+
+        <TextInput
+            style={styles.input}
+            placeholder="Senha"
+            value={senha}
+            onChangeText={setSenha}
+            secureTextEntry={true}
+        />
+        <Button
+            style={styles.btn}
+            title="LOGIN"
+            onPress={Verification}
+        />
+
+>>>>>>> Stashed changes
         <Button
           style={styles.btn}
           title="Cadastrar"
