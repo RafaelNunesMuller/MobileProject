@@ -42,6 +42,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginUsu} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
         <Stack.Screen name='CadastrarUsuario' options={{headerShown:false}} component={CadastrarUsuario}></Stack.Screen>
+
         <Stack.Screen name='CriarConsulta' options={{headerShown:false}} component={CreateConsultationScreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

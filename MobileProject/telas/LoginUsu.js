@@ -1,3 +1,4 @@
+
 import { View, Text, TextInput, StyleSheet, TouchableOpacity } from "react-native";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -114,4 +115,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.5,
   },
+
 });

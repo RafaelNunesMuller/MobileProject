@@ -3,7 +3,6 @@ import { Platform } from 'react-native';
 
 let DatePicker;
 
-
 // Importa a implementação específica da plataforma
 if (Platform.OS === 'web') {
   DatePicker = require('./DatePicker.web').default;

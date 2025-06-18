@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, Alert, ScrollView, Platform } from 'react-native';
 import MyDatePicker from '../modules/MyDataPicker';
 
-
 const CreateConsultationScreen = () => {
   const [patientName, setPatientName] = useState('');
   const [doctorName, setDoctorName] = useState('');

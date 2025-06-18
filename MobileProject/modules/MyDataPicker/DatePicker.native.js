@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { View, Button, Platform, Text, StyleSheet } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
-
 const DatePickerNative = ({ date, setDate, label = "Data" }) => {
   const [show, setShow] = useState(false);
 
