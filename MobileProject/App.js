@@ -6,12 +6,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
-
-
-
-
 import LoginUsu from './telas/LoginUsu';
 import Home from './telas/Home';
+import CadastrarUsuario from './telas/CadastrarUsuario';
 
 function TabBar(){
   const Tab = createBottomTabNavigator(); 
@@ -44,6 +41,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Login"> 
         <Stack.Screen name="Login" component={LoginUsu} options={{ headerShown: false }} />
         <Stack.Screen name="Home" component={Home} options={{ headerShown: false }} />
+        <Stack.Screen name='CadastrarUsuario' options={{headerShown:false}} component={CadastrarUsuario}></Stack.Screen>
         <Stack.Screen name='CriarConsulta' options={{headerShown:false}} component={CreateConsultationScreen}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
