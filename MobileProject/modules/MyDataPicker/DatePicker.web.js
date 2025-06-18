@@ -2,6 +2,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native'; // Usamos Text e View do RN para consistência no JSX, mas o renderizador web os transforma em divs/spans
 
+
 const DatePickerWeb = ({ date, setDate, label = "Data" }) => {
   const handleDateChange = (event) => {
     // `event.target.value` virá como uma string 'YYYY-MM-DD'

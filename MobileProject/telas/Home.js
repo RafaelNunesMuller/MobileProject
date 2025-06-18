@@ -5,12 +5,14 @@ export default function Home(){
         <View style={styles.container}>
             <Text style={styles.title}>Texto.........................</Text>
             <View style={styles.section}>
-                {<Image source={require("../assets/Medico1.jpg")} style={styles.image} />}
+
+                {<Image source={require("../Assets/Medico1.jpg")} style={styles.image} />}
                 <Text style={styles.text}>Texto1</Text>
             </View>
             <View style={styles.section}>
                 <Text style={styles.text}>Texto2</Text>
-                <Image source={require("../assets/Medico1.jpg")} style={styles.image} /> 
+                <Image source={require("../Assets/Medico1.jpg")} style={styles.image} /> 
+
             </View>
             <View style={styles.section}>
                 <Text style={styles.bottom}>Texto3</Text>
