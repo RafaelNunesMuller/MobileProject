@@ -1,13 +1,28 @@
 import { View, Text, TextInput, StyleSheet, Button, TouchableOpacity } from "react-native";
 import { useState } from "react";
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from "../controller";
 
 export default function LoginUsu({navigation}) {
 
+<<<<<<< Updated upstream
   const [usuario, setUsuario] = useState("");
 
+=======
+  const [email, setEmail] = useState(""); 
+>>>>>>> Stashed changes
   const [senha, setSenha] = useState("");
 
+  const Verification = () =>{
+    signInWithEmailAndPassword(auth, email, senha).then(userCredential => {console.log('usuario logado', userCredential.user.email);
+        navigation.navigate('Hometab');
+
+    })
+    
+}
+
   return (
+<<<<<<< Updated upstream
     <View style={styles.container}>
       <Text style={styles.title}>Login de Usuário</Text>
       <TextInput
@@ -31,14 +46,37 @@ export default function LoginUsu({navigation}) {
 
         onPress={() => navigation.navigate('Hometab')} 
       />
+=======
+      <View style={styles.container}>
+        <Text style={styles.title}>Login de Usuário</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="Nome"
+          value={email} 
+          onChangeText={setEmail}
+        />
 
-      <Button
-        style={styles.btn}
-        title="Cadastrar"
-        onPress={() => alert('Funcionalidade de cadastro ainda não implementada')} 
-      />
-    </View>
-        
+        <TextInput
+            style={styles.input}
+            placeholder="Senha"
+            value={senha}
+            onChangeText={setSenha}
+            secureTextEntry={true}
+        />
+        <Button
+            style={styles.btn}
+            title="LOGIN"
+            onPress={Verification}
+        />
+>>>>>>> Stashed changes
+
+        <Button
+          style={styles.btn}
+          title="Cadastrar"
+          onPress={() => alert('Funcionalidade de cadastro ainda não implementada')} 
+        />
+      </View>
+          
   );
 
 }

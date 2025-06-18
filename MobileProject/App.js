@@ -1,10 +1,16 @@
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'; 
-
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+<<<<<<< Updated upstream
+=======
+import 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
 
 import LoginUsu from './telas/LoginUsu';
+import CreateConsultationScreen from './telas/CriarConsultaTESTE';
+>>>>>>> Stashed changes
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'; 
+
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
 import Home from './telas/Home';
 
 function BottomTabBar(){
@@ -37,6 +43,9 @@ export default function App() {
   const Stack = createStackNavigator();
   return (
     <NavigationContainer>
+        <Stack.Screen name='CriarConsulta' options={{headerShown:false}} component={CreateConsultationScreen}></Stack.Screen>
+        <Stack.Screen name='Login' options={{headerShown:false}} component={LoginUsu}></Stack.Screen>
+
       <Stack.Navigator initialRouteName="Login"> 
         <Stack.Screen name="Login" component={LoginUsu} options={{ headerShown: false }} />
         <Stack.Screen name="Hometab" component={BottomTabBar} options={{ headerShown: false }} />
@@ -44,3 +53,7 @@ export default function App() {
     </NavigationContainer>
   );
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
