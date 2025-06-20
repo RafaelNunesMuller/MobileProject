@@ -12,7 +12,8 @@ import CadastrarUsuario from './telas/CadastrarUsuario';
 
 function TabBar(){
   const Tab = createBottomTabNavigator(); 
-  return(
+
+  return (
     <Tab.Navigator screenOptions={({ route }) => ({
       tabBarActiveTintColor: '#FFFFFF',
       tabBarInactiveTintColor: '#000',
@@ -31,9 +32,29 @@ function TabBar(){
         } 
       },
     })}>
-      <Tab.Screen name='Home' component={Home}></Tab.Screen>
-    </Tab.Navigator> 
-)}
+      <Tab.Screen 
+        name="Home" 
+        component={Home} 
+        options={{
+          tabBarIcon: () => (
+            <MaterialIcons name="home" size={40} color="white" />
+          ),
+        }} 
+      />
+      <Tab.Screen 
+        name="Teste" 
+        component={CreateConsultationScreen} 
+        options={{
+          tabBarIcon: () => (
+            <MaterialIcons name="Teste" size={40} color="white" />
+          ),
+        }} 
+      />
+    </Tab.Navigator>
+  ); 
+}
+  
+
 export default function App() {
   const Stack = createStackNavigator();
   return (
