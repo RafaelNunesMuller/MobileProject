@@ -12,10 +12,10 @@ export default function Home(){
                 <Text style={styles.text}>Nossa clinica que fica localizado em Criciuma</Text>
                 <Image source={require("../assets/clinica.jpg")} style={styles.image} /> 
             </View>
-            <View style={styles.section}>
+            <View style={styles.section2}>
                 <Text style={styles.bottom}>
                     Você não está sozinho 
-                    {"\n\n\n"}
+                    
                 </Text>
                 
                 <Text style={styles.bottom2}>
@@ -36,6 +36,11 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         alignItems: 'center',
         flexDirection: 'row',
+    },
+    section2: {
+        marginVertical: 10,
+        alignItems: 'center',
+        flexDirection: 'column',
     },
     title: {
         fontSize: 24,
