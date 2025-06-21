@@ -3,20 +3,20 @@ import { Text, View, StyleSheet, Image } from "react-native";
 export default function Home(){
     return(
         <View style={styles.container}>
-            <Text style={styles.title}>Texto.........................</Text>
+            <Text style={styles.title}>Bem vindo a PsiAmparo</Text>
             <View style={styles.section}>
 
-                {<Image source={require("../Assets/Medico1.jpg")} style={styles.image} />}
-                <Text style={styles.text}>Texto1</Text>
+                {<Image source={require("../assets/Medico1.jpg")} style={styles.image} />}
+                <Text style={styles.text}>esse é o nosso fundador</Text>
             </View>
             <View style={styles.section}>
-                <Text style={styles.text}>Texto2</Text>
-                <Image source={require("../Assets/Medico1.jpg")} style={styles.image} /> 
+                <Text style={styles.text}>essa é a nossa clinica</Text>
+                <Image source={require("../assets/Medico1.jpg")} style={styles.image} /> 
 
             </View>
-            <View style={styles.section}>
-                <Text style={styles.bottom}>Texto3</Text>
-                <Text style={styles.bottom}>Texto4</Text>
+            <View style={styles.section2}>
+                <Text style={styles.bottom}>Você não está sozinho — cuidar da mente também é um ato de coragem</Text>
+                <Text style={styles.bottom2}>Em alguns momentos da vida, nos sentimos sobrecarregados, sem energia, confusos ou presos em pensamentos que não conseguimos controlar. Ninguém escolhe passar por isso — mas todos merecem apoio.</Text>
             </View>
         </View>
     );
@@ -32,6 +32,11 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         alignItems: 'center',
         flexDirection: 'row',
+    },
+    section2: {
+        marginVertical: 10,
+        alignItems: 'center',
+        flexDirection: 'column',
     },
     title: {
         fontSize: 24,
@@ -51,6 +56,13 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     bottom: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        justifyContent:'flex-end',
+        textAlign: 'center',
+        
+    },
+    bottom2: {
         fontSize: 16,
         justifyContent:'flex-end',
         textAlign: 'center',
