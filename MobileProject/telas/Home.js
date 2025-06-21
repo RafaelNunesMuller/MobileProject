@@ -11,7 +11,7 @@ export default function Home(){
             </View>
             <View style={styles.section}>
                 <Text style={styles.text}>essa é a nossa clinica</Text>
-                <Image source={require("../assets/Medico1.jpg")} style={styles.image} /> 
+                <Image source={require("../assets/clinica.jpg")} style={styles.image} /> 
 
             </View>
             <View style={styles.section2}>
